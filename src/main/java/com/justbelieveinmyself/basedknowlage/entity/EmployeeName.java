@@ -1,8 +1,6 @@
 package com.justbelieveinmyself.basedknowlage.entity;
 
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import javax.persistence.*;
 import lombok.*;
 
 @Getter

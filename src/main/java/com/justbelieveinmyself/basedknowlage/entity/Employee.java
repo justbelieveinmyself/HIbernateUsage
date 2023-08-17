@@ -1,7 +1,7 @@
 package com.justbelieveinmyself.basedknowlage.entity;
 
-import jakarta.persistence.*;
 import lombok.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name="employees")
@@ -13,7 +13,7 @@ import lombok.*;
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
     private EmployeeName eName;
     private double salary;
     private int age;

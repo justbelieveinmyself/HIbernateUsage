@@ -1,6 +1,6 @@
 package com.justbelieveinmyself.onetoone.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 @Table(name = "students")
 @Entity
@@ -11,7 +11,7 @@ import lombok.*;
 @Getter
 public class Student {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
     private String name;
     private int mark;
 }

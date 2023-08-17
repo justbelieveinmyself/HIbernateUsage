@@ -1,7 +1,8 @@
 package com.justbelieveinmyself.onetomany.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,14 +13,16 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
+@Cacheable
+@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
 public class Student2 {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
     private String name;
     private int mark;
-    @OneToMany(mappedBy = "student2")
+    @OneToMany(mappedBy = "student2") // EAGER take all information from all related tables / LAZY - will take in runtime if it's needed
     private List<Laptop2> laptop2 = new ArrayList<>();
-    public Student2(long id, String name, int mark, List<Laptop2> laptop2) {
+    public Student2(int id, String name, int mark, List<Laptop2> laptop2) {
         this.id = id;
         this.name = name;
         this.mark = mark;

@@ -1,6 +1,6 @@
 package com.justbelieveinmyself.manytomany.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,12 +17,12 @@ import java.util.List;
 @NoArgsConstructor
 public class Student3 {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
     private String name;
     private int mark;
     @ManyToMany(mappedBy = "student3")
     private List<Laptop3> laptop3 = new ArrayList<>();
-    public Student3(long id, String name, int mark, List<Laptop3> laptop3){
+    public Student3(int id, String name, int mark, List<Laptop3> laptop3){
         this.id = id;
         this.name = name;
         this.mark = mark;

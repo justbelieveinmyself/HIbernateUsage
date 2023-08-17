@@ -1,7 +1,8 @@
 package com.justbelieveinmyself.onetomany.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
 @Table(name ="laptops2")
@@ -10,9 +11,11 @@ import lombok.*;
 @NoArgsConstructor
 @Getter
 @Setter
+@Cacheable
+@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
 public class Laptop2 {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long lid;
+    private int lid;
     private String name;
     @ManyToOne
     private Student2 student2;
