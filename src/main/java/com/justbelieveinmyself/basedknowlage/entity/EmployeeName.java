@@ -1,4 +1,4 @@
-package com.justbelieveinmyself.entity;
+package com.justbelieveinmyself.basedknowlage.entity;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Entity;

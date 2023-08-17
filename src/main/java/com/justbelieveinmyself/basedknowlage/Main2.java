@@ -1,6 +1,7 @@
-package com.justbelieveinmyself;
+package com.justbelieveinmyself.basedknowlage;
 
-import com.justbelieveinmyself.entity.User;
+import com.justbelieveinmyself.HibernateUtil;
+import com.justbelieveinmyself.basedknowlage.entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 

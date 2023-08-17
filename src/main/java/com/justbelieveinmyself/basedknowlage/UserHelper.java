@@ -1,10 +1,7 @@
-package com.justbelieveinmyself;
+package com.justbelieveinmyself.basedknowlage;
 
-import com.justbelieveinmyself.entity.User;
-import jakarta.persistence.Query;
-import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.persistence.criteria.CriteriaQuery;
-import jakarta.persistence.criteria.Root;
+import com.justbelieveinmyself.HibernateUtil;
+import com.justbelieveinmyself.basedknowlage.entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
