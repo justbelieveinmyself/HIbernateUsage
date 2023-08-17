@@ -6,8 +6,8 @@ public class Main {
     private static final UserHelper userHelper = new UserHelper();
     public static void main(String[] args) {
 
-
-
+    // LOAD VS GET -> get fetch object now, but load fetch object when it needed -------<
+    // if object null throws NullPointer exc for get AND ObjectNotFound exc for load
 
 
 //        System.out.println("-------------------------------------------");
