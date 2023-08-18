@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 
-
+        //ADD STUDENTS, LAPTOPS to tables
 //        Student2 arsen = Student2.builder().mark(2).name("Arsen").build();
 //        Laptop2 macbook = Laptop2.builder().student2(arsen).name("Macbook").build();
 //        Laptop2 asus = Laptop2.builder().student2(arsen).name("Asus").build();

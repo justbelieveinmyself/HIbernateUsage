@@ -13,7 +13,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="f54d0a38-9d8b-43ec-845d-a0a6ffe51a71">
-      <console name="MYSQL" type="STANDARD" schema="hibertest" session="Main"><![CDATA[select * from users]]></console>
+      <console name="MYSQL" type="STANDARD" schema="hibertest" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">

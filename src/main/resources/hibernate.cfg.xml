@@ -4,36 +4,41 @@
 
 <hibernate-configuration>
 
-<session-factory>
-    <!-- JDBC Database connection settings -->
-    <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibertest</property>
-    <property name="hibernate.connection.username">shadow</property>
-    <property name="hibernate.connection.password">1234</property>
-    <property name="hibernate.hbm2ddl.auto">update</property>
-    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-    <!-- Echo the SQL to stdout -->
-    <property name="hibernate.show_sql">true</property>
-    <property name="hibernate.format_sql">true</property>
-    <!-- Set the current session context -->
-    <property name="hibernate.current_session_context_class">thread</property>
-    <!-- Set cache level   -->
-   <property name="hibernate.cache.use_second_level_cache">true</property>
-    <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
-<!--    <property name="hibernate.cache.r">true</property>-->
-    <!-- Set mapping classes   -->
-    <mapping class="com.justbelieveinmyself.basedknowlage.entity.User"/>
-    <mapping class="com.justbelieveinmyself.basedknowlage.entity.Employee"/>
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibertest</property>
+        <property name="hibernate.connection.username">shadow</property>
+        <property name="hibernate.connection.password">1234</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- Echo the SQL to stdout -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <!-- Set the current session context -->
+        <property name="hibernate.current_session_context_class">thread</property>
+        <!-- Set cache level   -->
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+<!--        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>-->
+        <property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
 
-    <mapping class="com.justbelieveinmyself.onetoone.entity.Student"/>
-    <mapping class="com.justbelieveinmyself.onetoone.entity.Laptop"/>
+        <property name="hibernate.cache.use_query_cache">true</property>
+        
+        <!-- Set mapping classes   -->
+        <mapping class="com.justbelieveinmyself.basedknowlage.entity.User"/>
+        <mapping class="com.justbelieveinmyself.basedknowlage.entity.Employee"/>
 
-    <mapping class="com.justbelieveinmyself.onetomany.entity.Student2"/>
-    <mapping class="com.justbelieveinmyself.onetomany.entity.Laptop2"/>
+        <mapping class="com.justbelieveinmyself.onetoone.entity.Student"/>
+        <mapping class="com.justbelieveinmyself.onetoone.entity.Laptop"/>
 
-    <mapping class="com.justbelieveinmyself.manytomany.entity.Laptop3"/>
-    <mapping class="com.justbelieveinmyself.manytomany.entity.Student3"/>
+        <mapping class="com.justbelieveinmyself.onetomany.entity.Student2"/>
+        <mapping class="com.justbelieveinmyself.onetomany.entity.Laptop2"/>
 
-</session-factory>
+        <mapping class="com.justbelieveinmyself.manytomany.entity.Laptop3"/>
+        <mapping class="com.justbelieveinmyself.manytomany.entity.Student3"/>
+
+        <mapping class="com.justbelieveinmyself.hql.entity.Alien"/>
+
+    </session-factory>
 
 </hibernate-configuration>
